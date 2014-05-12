@@ -23,7 +23,7 @@
 # inherit from common msm8960
 include device/samsung/msm8960-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/mondrianwifi/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/mondrianwlte/include
 
 # overrides  msm8960
 TARGET_BOARD_PLATFORM := msm8974
@@ -31,7 +31,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 
 # Kernel Configs
-TARGET_KERNEL_SOURCE := kernel/samsung/mondrianwifi
+TARGET_KERNEL_SOURCE := kernel/samsung/mondrianlte
 TARGET_KERNEL_CONFIG := msm8974_sec_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 # TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_???_defconfig
@@ -45,17 +45,17 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
 
 # Graphics
-BOARD_EGL_CFG := device/samsung/mondrianwifi/egl.cfg
+BOARD_EGL_CFG := device/samsung/mondrianlte/egl.cfg
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/mondrianwifi/recovery/recovery_keys.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/mondrianlte/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := device/samsung/mondrianwifi/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/samsung/mondrianlte/rootdir/etc/fstab.qcom
 
 TARGET_USERIMAGES_USE_EXT4 := true
 # fix this up by examining /proc/mtd on a running device
@@ -66,8 +66,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/mondrianwifi/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/mondrianwifi/bluetooth/vnd_mondrianwifi.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/mondrianlte/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/mondrianlte/bluetooth/vnd_mondrianlte.txt
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 
 # NFC
@@ -85,7 +85,7 @@ TARGET_QCOM_MEDIA_VARIANT := caf-new
 TARGET_DISPLAY_USE_RETIRE_FENCE := false
 
 # Audio settings
-BOARD_USES_CUSTOM_AUDIO_PLATFORM_PATH := device/samsung/mondrianwifi/audio/platform
+BOARD_USES_CUSTOM_AUDIO_PLATFORM_PATH := device/samsung/mondrianlte/audio/platform
 AUDIO_FEATURE_DISABLED_MULTI_VOICE_SESSIONS := true
 AUDIO_FEATURE_DISABLED_FM := true
 AUDIO_FEATURE_DISABLED_ANC_HEADSET := true
@@ -121,7 +121,7 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := mondrianwifi
+TARGET_OTA_ASSERT_DEVICE := mondrianlte
 
 # PowerHAL extension
-TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/samsung/mondrianwifi/power/power_ext.c
+TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/samsung/mondrianlte/power/power_ext.c
